@@ -1,17 +1,17 @@
 package week4;
 
 public class Product {
-    private String nameAtStart;
-    private double priceAtStart;
-    private int amountAtStart;
+    private String name;
+    private double price;
+    private int amount;
 
-    public Product(String nameAtStart, double priceAtStart, int amountAtStart) {
-        this.nameAtStart = nameAtStart;
-        this.priceAtStart = priceAtStart;
-        this.amountAtStart = amountAtStart;
+    public Product(String name, double price, int amount) {
+        this.name = name;
+        this.price = price;
+        this.amount = amount;
     }
 
-    public String printProduct() {
-        return this.nameAtStart + ", price " + this.priceAtStart + ", amount " + this.amountAtStart;
+    public void printProduct() {
+        System.out.println(this.name + ", price " + this.price + ", amount " + this.amount);
     }
 }
