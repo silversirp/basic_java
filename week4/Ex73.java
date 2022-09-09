@@ -5,6 +5,7 @@ public class Ex73 {
         Product banana = new Product("Banana", 1.1, 13);
 
         banana.printProduct();
+        System.out.println(banana);
     }
 
 
