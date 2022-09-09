@@ -5,19 +5,17 @@ public class Ex72 {
 
         Account mattAccount = new Account("Matt's account",1000.00);
         Account myAccount = new Account("My account",0.00);
+        Account a = new Account("A",100.00);
+        Account b = new Account("B",0.00);
+        Account c = new Account("C",0.00);
 
-        System.out.println("Initial state");
-        System.out.println(mattAccount);
-        System.out.println(myAccount);
+        transfer(a, b, 50);
+        transfer(b, c, 25);
 
-        mattAccount.withdrawal(100);
-        System.out.println("Matt's account balance is now: "+mattAccount.balance());
-        myAccount.deposit(100);
-        System.out.println("My account balance is now: "+myAccount.balance());
+        System.out.println("A's account balance is now: "+a.balance());
+        System.out.println("B's account balance is now: "+b.balance());
+        System.out.println("C's account balance is now: "+c.balance());
 
-        System.out.println("Final state");
-        System.out.println(mattAccount);
-        System.out.println(myAccount);
 
 
     }
