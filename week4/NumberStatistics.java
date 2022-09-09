@@ -9,11 +9,11 @@ public class NumberStatistics {
 
     public NumberStatistics() {
         // initialize here the object variable amountOfNumbers
-        this.amountOfNumbers = amountOfNumbers();
+        this.amountOfNumbers = 0;
     }
 
     public void addNumber(int number) {
-        amountOfNumbers++;
+        this.amountOfNumbers++;
         this.sum += number;
     }
 
@@ -22,12 +22,11 @@ public class NumberStatistics {
     }
 
     public int sum() {
-        return sum;
+        return this.sum;
     }
 
     public double average() {
-        double average = sum/ (double)amountOfNumbers;
-        return average;
+        return sum/ (double)amountOfNumbers;
     }
 
 }
