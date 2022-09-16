@@ -1,7 +1,6 @@
 package week7;
 
 public class Ex4 {
-
     public static void main(String[] args) {
         Thing book = new Thing("Happiness in three steps", 2);
         Thing mobile = new Thing("Nokia 3210", 1);
@@ -19,5 +18,4 @@ public class Ex4 {
         suitcase.addThing(brick);
         System.out.println(suitcase);
     }
-
 }
