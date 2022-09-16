@@ -11,7 +11,13 @@ public class ShoppingBasket {
     }
 
     public void add(String product, int price){
-        this.purchases.add(new Purchase(product, 1, price));
+        Purchase purchase = new Purchase(product, 1, price);
+        if (this.purchases.indexOf(purchase) == -1) {
+            this.purchases.add(new Purchase(product, 1, price));
+        } else {
+            this.purchases.get(this.purchases.indexOf(purchase)).increaseAmount();
+        }
+
     }
 
     public int price(){
