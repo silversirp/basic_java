@@ -56,4 +56,7 @@ public class Suitcase {
         return heaviest;
     }
 
+    public ArrayList<Thing> getThings() {
+        return things;
+    }
 }
