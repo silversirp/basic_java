@@ -18,5 +18,6 @@ public class Ex12 {
         basket.add("milk", 3);
         basket.print();
         System.out.println("basket price: " + basket.price() +"\n");
+
     }
 }
