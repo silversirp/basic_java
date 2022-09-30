@@ -1,5 +1,7 @@
 package week10;
 
+import java.text.DecimalFormat;
+
 public class Hamburger {
 
     private String name;
@@ -59,7 +61,7 @@ public class Hamburger {
         this.addition4Price = additionPrice;
     }
 
-    public double itemizeHamburger(){
+    public String itemizeHamburger(){
         System.out.println(this.name + " hamburger on a " + this.breadRollType + " roll with " + this.meat + ", price is " + this.price);
 
         if (addition1Name != null){
@@ -81,8 +83,10 @@ public class Hamburger {
 
         //finally add basic price of burger
         totalPrice += this.price;
-        totalPrice = Math.round(totalPrice * 100.0) / 100.0;
-        System.out.println("Total price rounded: " + totalPrice);
-        return totalPrice;
+
+        String rounded = df.format(totalPrice);
+        return rounded;
     }
+
+    private static final DecimalFormat df = new DecimalFormat("0.00");
 }
