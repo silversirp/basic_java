@@ -60,7 +60,7 @@ public class Hamburger {
     }
 
     public double itemizeHamburger(){
-        System.out.println("Basic hamburger on a " + this.breadRollType + " roll with " + this.meat + ", price is " + this.price);
+        System.out.println(this.name + " hamburger on a " + this.breadRollType + " roll with " + this.meat + ", price is " + this.price);
 
         if (addition1Name != null){
             this.totalPrice += this.addition1Price;
@@ -81,6 +81,8 @@ public class Hamburger {
 
         //finally add basic price of burger
         totalPrice += this.price;
+        totalPrice = Math.round(totalPrice * 100.0) / 100.0;
+        System.out.println("Total price rounded: " + totalPrice);
         return totalPrice;
     }
 }
